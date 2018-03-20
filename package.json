@@ -3,14 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jquery-ui": "^1.12.1",
+    "node-sass-chokidar": "^1.1.2",
+    "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-highcharts": "^16.0.2",
+    "react-modal": "^3.3.2",
+    "react-scripts": "1.1.1",
+    "react-tabs": "^2.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start-js": "cross-env NODE_PATH=src/ react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css && cross-env NODE_PATH=src/ build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "datatables.net": "^1.10.16",
+    "jquery": "^3.3.1"
   }
 }

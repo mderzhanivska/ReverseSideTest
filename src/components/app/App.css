@@ -1,0 +1,107 @@
+body {
+  background-color: #292929;
+  font-family: Helvetica, sans-serif; }
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%; }
+
+.open-modal {
+  padding-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .open-modal__text {
+    font-size: 15px;
+    color: #ccc; }
+  .open-modal__btn {
+    margin-top: 10px;
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
+    color: white;
+    padding: 3px 7px; }
+
+.modal-title, .tab-title {
+  color: #cccccc; }
+
+.tab-title {
+  font-size: 12px;
+  padding-top: 10px; }
+
+.react-tabs {
+  position: relative; }
+  .react-tabs__tab-list {
+    position: relative;
+    padding: 0;
+    display: flex; }
+    .react-tabs__tab-list:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #808080; }
+  .react-tabs__tab {
+    z-index: 2;
+    padding: 0 10px;
+    list-style-type: none;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    color: #808080; }
+    .react-tabs__tab--selected {
+      border-color: dodgerblue;
+      color: dodgerblue; }
+
+.bm-overlay {
+  left: 0; }
+
+.ReactModal__Overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.85) !important; }
+
+.ReactModal__Body--open {
+  overflow: hidden; }
+
+.ReactModal__Overlay--after-open {
+  background-color: #292929 !important; }
+
+.ReactModal__Content--after-open {
+  background-color: #292929 !important;
+  border: 1px solid dodgerblue !important;
+  border-radius: 4px; }
+
+.table {
+  color: #808080; }
+  .table th {
+    font-weight: bolder; }
+  .table tr {
+    font-size: 13px; }
+  .table th, .table td {
+    border: 1px solid #808080;
+    padding: 0; }
+
+.preview {
+  margin: 0 auto;
+  display: block;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-image: url("~img/circle-app.png");
+  background-size: 100%; }
+
+.ready {
+  margin: 0 auto;
+  display: block;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-image: url("~img/ready.png");
+  background-size: 100%; }
